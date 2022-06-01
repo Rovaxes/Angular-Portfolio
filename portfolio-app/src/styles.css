@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "AxiformaBold";
+    src: url(./assets/fonts/Axiforma-Bold.ttf);
+}
+
+@font-face {
+    font-family: "AxiformaSemiBold";
+    src: url(./assets/fonts/Axiforma-SemiBold.ttf);
+}
+@font-face {
+    font-family: "AxiformaNormal";
+    src: url(./assets/fonts/Axiforma-Medium.ttf);
+}
+@font-face {
+    font-family: "AxiformaNormalItalic";
+    src: url(./assets/fonts/Axiforma-MediumItalic.ttf);
+}
