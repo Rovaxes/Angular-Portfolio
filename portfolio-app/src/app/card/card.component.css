@@ -1,0 +1,43 @@
+* {
+    font-family: AxiformaNormal;
+    font-size: max(18px, 0.75vw);
+}
+
+.mainContainer {
+    background-color: #262626;
+}
+
+.contentContainer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.full-card {
+    width: 100%;
+}
+
+.eighty-card {
+    width: 80%;
+}
+
+.card {
+    background: #2D2D2D;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 25px;
+    margin-bottom: 35px;
+}
+
+
+h3 {
+    font-family: AxiformaBold;
+}
+
+h4 {
+    font-family: AxiformaNormalItalic;
+}
+
+h5 {
+    padding: 0;
+    margin: 0;
+}
+
