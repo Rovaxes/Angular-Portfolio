@@ -1,32 +1,47 @@
-.container {
+.mainContainer {
     background-color: #262626;
     height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    width: 100%;
+
 }
 
 .welcomeContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+    row-gap: 10%;
+    column-gap: 5%;
     align-items: center;
     justify-items: center;
+    align-content: center;
+    justify-content: center;
     width: 80%;
+    margin: 0 auto;
+    padding-top: 10%;
 }
 
 .welcomeText {
-    font-size: 64px;
+    font-size: max(24px, 3vw);
     font-family: AxiformaSemiBold;
     color: #F5F5F5;
 }
 
-img {
+.selfie {
     height: 40vh;
+    min-height: 20vh;
     border-radius: 40vh;
+    padding: 0;
+    margin: 0;
 }
 
-img.logo {
+.logo {
     height: 75px;
+    min-height: 10px;
     display: block;
+}
+
+.arrow 
+{
+  position:absolute;
+  bottom: 5vh;
+  right: 10vw;
 }
