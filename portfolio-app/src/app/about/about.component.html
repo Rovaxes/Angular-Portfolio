@@ -1,0 +1,22 @@
+<div class="mainContainer">
+    <div class="contentContainer">
+        <h2>About Me</h2>
+        <div class="my-5">
+        <div class="educationContainer">
+            <h5>Education</h5>
+            <div class="my-3"></div>
+            <app-card [cardType]="educationCardSize" [cardInfo]="educationInfo"></app-card>
+        </div>
+        <div class="my-5"></div>
+        <div class="workContainer">
+            <h5>Work Expierence</h5>
+            <div class="my-3"></div>
+            <app-card 
+                *ngFor="let cardInfo of expierenceInfo"
+                [cardType]="workCardSize" 
+                [cardInfo]="cardInfo"></app-card>
+        </div>
+        <div class="my-5">
+
+    </div>
+</div>

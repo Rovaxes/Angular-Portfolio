@@ -1,0 +1,25 @@
+.mainContainer {
+    background-color: #262626;
+}
+
+.contentContainer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+* {
+    color: white;
+}
+
+h2 {
+    font-family: AxiformaNormal;
+    font-size: max(20px, 2vw);;
+    color: white;
+    text-align: center;
+}
+
+h5 {
+    font-family: AxiformaNormal;
+    font-size: max(20px, 1vw);
+    color: white;
+}
