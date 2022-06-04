@@ -1,22 +1,34 @@
 <div class="mainContainer">
     <div class="contentContainer">
         <h2>About Me</h2>
-        <div class="my-5">
+        <div class="py-5">
         <div class="educationContainer">
             <h5>Education</h5>
             <div class="my-3"></div>
             <app-card [cardType]="educationCardSize" [cardInfo]="educationInfo"></app-card>
         </div>
-        <div class="my-5"></div>
+        <div class="py-5"></div>
         <div class="workContainer">
             <h5>Work Expierence</h5>
             <div class="my-3"></div>
             <app-card 
-                *ngFor="let cardInfo of expierenceInfo"
+                *ngFor="let cardInfo of expierenceInfo; let first = first; let last = last;"
                 [cardType]="workCardSize" 
+                [cardInfo]="cardInfo"
+                [first]="first"
+                [last]="last"></app-card>
+        </div>
+        <div class="py-2"></div>
+        <div class="line"></div>
+        <div class="py-2"></div>
+        
+        <div class="skillContainer">
+            <app-card 
+            class="test"
+                *ngFor="let cardInfo of skillsInfo;"
+                [cardType]="imageCardSize" 
                 [cardInfo]="cardInfo"></app-card>
         </div>
-        <div class="my-5">
-
+        <div class="py-5"></div>
     </div>
 </div>

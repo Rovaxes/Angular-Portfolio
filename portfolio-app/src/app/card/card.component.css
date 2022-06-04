@@ -12,21 +12,59 @@
     margin: 0 auto;
 }
 
+.timelineContainer {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
 .full-card {
     width: 100%;
+    display:grid;
+    grid-template-columns: 6fr 1fr;
 }
 
 .eighty-card {
     width: 80%;
 }
 
+.twenty-card {
+    width: 20%;
+}
+
 .card {
     background: #2D2D2D;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 25px;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
+.image-card {
+    display: flex;
+    background: #2D2D2D;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+
+    height: 5vw;
+    max-height: 10vw;
+    min-height: 50px;
+    width: 5vw;
+    max-width: 10vw;
+    min-width: 50px;
+}
+
+.inline {
+    display: flex;
+    width: 100%;
+}
+
+.center {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
 
 h3 {
     font-family: AxiformaBold;
@@ -36,8 +74,40 @@ h4 {
     font-family: AxiformaNormalItalic;
 }
 
-h5 {
+.removeSpacing {
     padding: 0;
     margin: 0;
 }
 
+.date {
+    margin: 15px;
+    text-align: center;
+}
+
+.vline {
+    border: white 2px solid;
+    flex: 1 1 auto;
+    padding-top: 10%;
+}
+
+.last {
+    border-radius: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    border-radius: 50%;
+    display: fixed;
+}
+
+.sideImage {
+    width: auto;
+    height: 100%;
+    float: right;
+}
+
+.imageContainer {
+    height: 100px;
+}

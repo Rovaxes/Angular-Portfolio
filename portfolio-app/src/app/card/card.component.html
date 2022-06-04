@@ -1,5 +1,28 @@
-<div [ngClass]="{'full-card': cardType === 'full', 'eighty-card': cardType === '80'}" class="card">
-    <h3>{{cardInfo.header}}</h3>
-    <h4>{{cardInfo.secondary}}</h4>
-    <h5>{{cardInfo.tertiary}}</h5>
+<div *ngIf="cardType!=='image'">
+    <div [ngClass]="{'inline': cardType === '80'}">
+        <div [ngClass]="{'full-card': cardType === 'full', 'eighty-card': cardType === '80'}" class="card">
+            <div class="left">
+                <h3>{{cardInfo.header}}</h3>
+                <h4>{{cardInfo.secondary}}</h4>
+                <h5 class="removeSpacing">{{cardInfo.tertiary}}</h5>
+            </div>
+            <div *ngIf="cardType == 'full'" class="imageContainer">
+                <img class="sideImage" [src]="cardInfo.image" alt='{{cardInfo.header}}'>
+            </div>
+        </div>
+        <div *ngIf="cardType==='80'" class="twenty-card">
+            <div class="timelineContainer center">
+                <span *ngIf="first" class="dot"></span>
+                <div class="vline"></div>
+                <h5 class="date">{{cardInfo.date}}</h5>
+                <div [ngClass]="{'last': last}" class="vline"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="cardType==='image'">
+    <div class="image-card">
+        <img [src]="cardInfo.image" alt="cardInfo.header">
+    </div>
 </div>
