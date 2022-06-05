@@ -16,7 +16,7 @@
     justify-content: center;
     width: 80%;
     margin: 0 auto;
-    padding-top: 10%;
+    padding-top: max(100px, 12%);
 }
 
 .welcomeText {
