@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { bounceAnimation, bounceInDownOnEnterAnimation, bounceInUpOnEnterAnimation, expandOnEnterAnimation, fadeInOnEnterAnimation, fadeOutOnLeaveAnimation, slideInUpOnEnterAnimation, slideOutUpAnimation, slideOutUpOnLeaveAnimation } from 'angular-animations';
+import { loadFull } from 'tsparticles';
+import { Container, Engine } from 'tsparticles-engine';
 
 
 @Component({
@@ -22,6 +24,31 @@ export class LandingComponent implements OnInit {
 
   visible = false;
   animState = false;
+
+  id = "tsparticles";
+
+  /* Starting from 1.19.0 you can use a remote url (AJAX request) to a JSON with the configuration */
+  particlesUrl = "https://particles.js.org/samples/presets/fireworks.html";
+  
+  particlesOptions = {
+    particles: {
+      color: {
+        value: [ '#ff0000', '#0000ff' ]
+      },
+      lineLinked: {
+        enable: true,
+        color: 'random'
+      },
+      move: {
+        enable: true,
+        speed: 5
+      },
+      fullScreen: {
+        zIndex: -100
+      },
+    }
+  }
+
   constructor() { }
 
   ngOnInit(): void {
@@ -37,4 +64,12 @@ export class LandingComponent implements OnInit {
     this.animState = !this.animState
   }
 
+  particlesLoaded(container: Container): void {
+    console.log(container);
+  }
+
+  async particlesInit(engine: Engine): Promise<void> {
+    await loadFull(engine);
+  }
+  
 }

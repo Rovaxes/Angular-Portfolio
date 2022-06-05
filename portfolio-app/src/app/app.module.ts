@@ -15,6 +15,9 @@ import { ScrollAnchorDirective } from './scroll-anchor.directive';
 import { ScrollSectionDirective } from './scroll-section.directive';
 import { ScrollManagerDirective } from './scroll-manager.directive';
 
+import { NgParticlesModule } from "ng-particles";
+import { TestComponent } from './test/test.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,12 +30,14 @@ import { ScrollManagerDirective } from './scroll-manager.directive';
     EnterTheViewportNotifierDirective,
     ScrollAnchorDirective,
     ScrollSectionDirective,
-    ScrollManagerDirective
+    ScrollManagerDirective,
+    TestComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgParticlesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

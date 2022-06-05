@@ -5,6 +5,10 @@ body, html {
     overflow-x: hidden;
 }
 
+* {
+    display: fixed;
+    z-index: 100;
+}
 @font-face {
     font-family: "AxiformaBold";
     src: url(./assets/fonts/Axiforma-Bold.ttf);

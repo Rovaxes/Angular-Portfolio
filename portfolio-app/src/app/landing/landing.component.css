@@ -5,6 +5,16 @@
 
 }
 
+* {
+    z-index: 1000;
+}
+.back {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;  
+}
+
 .welcomeContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, auto));

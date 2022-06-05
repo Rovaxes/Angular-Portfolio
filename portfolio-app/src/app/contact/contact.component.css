@@ -9,7 +9,7 @@
 }
 
 * {
-    
+    z-index: 1000;
 }
 
 p {
@@ -34,11 +34,11 @@ h2 {
 }
 
 form {
+    position: sticky;
     display: flex;
     flex-direction: column;
     height: 75vh;
     padding: 16px;
     background: #2D2D2D;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
 }
