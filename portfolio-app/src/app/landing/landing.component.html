@@ -1,11 +1,13 @@
-<div class="mainContainer" *ngIf='state' [@fadeInOnEnter] [@fadeOutOnLeave]>
+<div (visibilityChange)="_visibilityChangeHandler($event)" appEnterTheViewportNotifier class="mainContainer">
     <app-navbar></app-navbar>
-    <div class="welcomeContainer">
-        <img class="selfie" [src]="path" alt="Selfie">
-        <div class="welcomeText"> 
+    <div *ngIf='visible' class="welcomeContainer">
+        <img [@slideInUpOnEnter] class="selfie" [src]="path" alt="Selfie">
+        <div [@slideInUpOnEnterSlow] class="welcomeText"> 
             Hi! My name’s Dennis and I’m a Software Developer
             <img class="logo" [src]="logo" alt="Selfie">
         </div>
-        <img class="arrow" [src]="arrow" alt="Arrow">
+    </div>
+    <div [@fadeInOnEnter]>
+        <img [@bounce]="animState" (@bounce.done)="animDone()" class="arrow" [src]="arrow" alt="Arrow">
     </div>
 </div>

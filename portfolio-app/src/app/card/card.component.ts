@@ -3,7 +3,7 @@ import { Component, OnInit, Input} from '@angular/core';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
   @Input() cardType: string = "full";
@@ -16,10 +16,10 @@ export class CardComponent implements OnInit {
   }
   @Input() first: boolean = false;
   @Input() last: boolean = false;
+  @Input() index = -1;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

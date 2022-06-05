@@ -10,7 +10,10 @@ import { CardComponent } from './card/card.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { EnterTheViewportNotifierDirective } from './enter-the-viewport-notifier.directive';
+import { ScrollAnchorDirective } from './scroll-anchor.directive';
+import { ScrollSectionDirective } from './scroll-section.directive';
+import { ScrollManagerDirective } from './scroll-manager.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AboutComponent,
     CardComponent,
     ProjectsComponent,
-    ContactComponent
+    ContactComponent,
+    EnterTheViewportNotifierDirective,
+    ScrollAnchorDirective,
+    ScrollSectionDirective,
+    ScrollManagerDirective
   ],
   imports: [
     BrowserModule,

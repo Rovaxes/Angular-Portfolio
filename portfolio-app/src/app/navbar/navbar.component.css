@@ -12,7 +12,7 @@
 
 .nav-tabs > li > a{
   border: medium none;
-  font-size: 2vw;
+  font-size: max(12px, 1.5vw);
   color: white;
   font-family: "AxiformaNormal";
   margin-left: 10px;

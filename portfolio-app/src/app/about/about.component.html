@@ -1,28 +1,41 @@
 <div class="mainContainer">
     <div class="contentContainer">
-        <h2>About Me</h2>
+        <div class="py-1"></div>
+        <h2 [@bounceInRightOnEnter]>About Me</h2>
         <div class="py-5">
         <div class="educationContainer">
-            <h5>Education</h5>
+            <h5 (visibilityChange)="educationVisibilityHandler($event)" appEnterTheViewportNotifier>Education</h5>
             <div class="my-3"></div>
-            <app-card [cardType]="educationCardSize" [cardInfo]="educationInfo"></app-card>
+            <div [@bounceInRight]="educationVisibility" (@bounceInRight.done)="animStart($event)" 
+                [@bounceOutRight]="!educationVisibility" (@bounceOutRight.done)="animDone($event)">
+                <app-card [cardType]="educationCardSize" [cardInfo]="educationInfo"></app-card>
+            </div>
         </div>
         <div class="py-5"></div>
         <div class="workContainer">
-            <h5>Work Expierence</h5>
+            <h5 (visibilityChange)="workVisibilityHandler($event, 0)" appEnterTheViewportNotifier>Work Expierence</h5>
             <div class="my-3"></div>
+            <div [@bounceInRight]="workVisibility" (@bounceInRight.done)="animStart($event)"
+                [@bounceOutRight]="!workVisibility" (@bounceOutRight.done)="animDone($event)">
             <app-card 
-                *ngFor="let cardInfo of expierenceInfo; let first = first; let last = last;"
+                *ngFor="let cardInfo of expierenceInfo; let first = first; let last = last; let index = index;"
                 [cardType]="workCardSize" 
                 [cardInfo]="cardInfo"
                 [first]="first"
-                [last]="last"></app-card>
+                [last]="last"
+                [index]="index"></app-card>
+            </div>
         </div>
-        <div class="py-2"></div>
+        <div (visibilityChange)="workVisibilityHandler($event, 1)" appEnterTheViewportNotifier class="py-2"></div>
         <div class="line"></div>
-        <div class="py-2"></div>
+        <div class="py-2"         
+            (visibilityChange)="skillsVisibilityHandler($event)" 
+            appEnterTheViewportNotifier></div>
         
-        <div class="skillContainer">
+        <div 
+            [@bounceInRight]="skillsVisibility" (@bounceInRight.done)="animStart($event)" 
+            [@bounceOutRight]="!skillsVisibility" (@bounceOutRight.done)="animDone($event)"
+        class="skillContainer">
             <app-card 
             class="test"
                 *ngFor="let cardInfo of skillsInfo;"

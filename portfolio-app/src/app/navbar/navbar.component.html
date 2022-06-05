@@ -1,25 +1,20 @@
-<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs justify-content-center navBackground">
+<ul [@expandOnEnter] ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs justify-content-center navBackground">
     <li [ngbNavItem]="1">
-      <a ngbNavLink>Home</a>
+      <a ngbNavLink appScrollAnchor="one">Home</a>
       <ng-template ngbNavContent>
       </ng-template>
     </li>
-    <li [ngbNavItem]="2">
+    <li [ngbNavItem]="2" appScrollAnchor="two">
       <a ngbNavLink>About</a>
       <ng-template ngbNavContent>
       </ng-template>
     </li>
-    <li [ngbNavItem]="3">
-      <a ngbNavLink>Expierences</a>
+    <li [ngbNavItem]="3" appScrollAnchor="three">
+      <a ngbNavLink>Games and Projects</a>
       <ng-template ngbNavContent>
       </ng-template>
     </li>
-    <li [ngbNavItem]="4">
-        <a ngbNavLink>Games</a>
-        <ng-template ngbNavContent>
-        </ng-template>
-    </li>
-    <li [ngbNavItem]="5">
+    <li [ngbNavItem]="4"  appScrollAnchor="four">
         <a ngbNavLink>Contact</a>
         <ng-template ngbNavContent>
         </ng-template>

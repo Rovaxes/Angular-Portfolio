@@ -1,11 +1,17 @@
 <div class="mainContainer">
     <div class="contentContainer">
         <div class="py-4"></div>
-        <h2>Contact Me</h2>
+        <h2 (visibilityChange)="textVisibilityHandler($event)" appEnterTheViewportNotifier>Contact Me</h2>
         <div class="py-4"></div>
         <div> 
-            <p style="color: white;"> If you fancy a chat feel free to drop me a line!</p>
-            <form>
+            <p 
+                [@slideInRight]="textVisibility" (@slideInRight.done)="animStart($event)"
+                [@slideOutRight]="!textVisibility" (@slideOutRight.done)="animDone($event)"
+                (visibilityChange)="formVisibilityHandler($event)" appEnterTheViewportNotifier
+                style="color: white;"> If you fancy a chat feel free to drop me a line!</p>
+            <form 
+                [@slideInRight]="formVisibility" (@slideInRight.done)="animStart($event)"
+                [@slideOutRight]="!formVisibility" (@slideOutRight.done)="animDone($event)">
                 <div class="input-group emailContainer">
                     <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" name="email" id="name" placeholder="Email...">
                 </div>

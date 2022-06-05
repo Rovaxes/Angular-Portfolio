@@ -1,11 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { pulseAnimation } from 'angular-animations';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: ['./projects.component.css'],
+  animations: [
+    pulseAnimation({duration: 5000})
+  ]
 })
 export class ProjectsComponent implements OnInit {
+
+  animState = false;
 
   projects = [
     {
@@ -22,4 +28,7 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  animDone() {
+    this.animState = !this.animState
+  }
 }
