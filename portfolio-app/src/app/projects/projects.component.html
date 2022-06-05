@@ -1,0 +1,16 @@
+<div class="mainContainer">
+    <div class="contentContainer">
+        <div class="py-4"></div>
+        <h2>Project and Games</h2>
+        <div class="projectContainer">
+            <img
+                *ngFor="let project of projects;"
+                [src]="project.image"
+                alt="{{project.name}}"/>
+        </div>
+        <img
+        class="comingSoon"
+        src="../../assets/images/comingSoon.png"
+        alt="Comming Soon"/>
+    </div>
+</div>
