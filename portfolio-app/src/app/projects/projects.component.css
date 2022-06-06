@@ -1,5 +1,5 @@
 .mainContainer {
-    background-color: white;
+    background-color: #FFFBFF;
 }
 
 .contentContainer {
@@ -12,7 +12,7 @@
 h2 {
     font-family: AxiformaNormal;
     font-size: max(20px, 2vw);;
-    color: black;
+    color: #00916E;
     text-align: center;
 }
 

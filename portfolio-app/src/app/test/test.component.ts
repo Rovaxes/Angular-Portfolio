@@ -49,7 +49,7 @@ export class TestComponent implements OnInit {
       },
       links: {
         color: "#ffffff",
-        distance: 100,
+        distance: 150,
         enable: true,
         opacity: 0.2,
         width: 1
@@ -64,13 +64,13 @@ export class TestComponent implements OnInit {
           default: OutMode.bounce
         },
         random: true,
-        speed: 5,
+        speed: 2,
         straight: false
       },
       number: {
         density: {
           enable: true,
-          area: 800
+          area: 1000
         },
         value: 80
       },
