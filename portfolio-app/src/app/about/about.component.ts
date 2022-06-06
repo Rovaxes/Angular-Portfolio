@@ -23,7 +23,7 @@ export class AboutComponent implements OnInit {
     secondary: "Lassonde School of Engineering, York University",
     tertiary: "Toronto",
     date: "April 2022",
-    image: "../../assets/images/yorku.png"
+    image: "assets/images/yorku.png"
   }
 
   expierenceInfo = [
@@ -56,42 +56,42 @@ export class AboutComponent implements OnInit {
       secondary: "",
       tertiary: "",
       date: "",
-      image: "../../assets/images/python.png"
+      image: "assets/images/python.png"
     },
     {    
       header: "Java",
       secondary: "",
       tertiary: "",
       date: "",
-      image: "../../assets/images/java.png"
+      image: "assets/images/java.png"
     },
     {    
       header: "C#",
       secondary: "",
       tertiary: "",
       date: "",
-      image: "../../assets/images/csharp.png"
+      image: "assets/images/csharp.png"
     },
     {    
       header: "React",
       secondary: "",
       tertiary: "",
       date: "",
-      image: "../../assets/images/react.png"
+      image: "assets/images/react.png"
     },
     {    
       header: "Github",
       secondary: "",
       tertiary: "",
       date: "",
-      image: "../../assets/images/github.png"
+      image: "assets/images/github.png"
     },
     {    
       header: "SQL",
       secondary: "",
       tertiary: "",
       date: "",
-      image: "../../assets/images/sql.png"
+      image: "assets/images/sql.png"
     },
   ]
 

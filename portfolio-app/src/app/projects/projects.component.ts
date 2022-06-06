@@ -16,11 +16,11 @@ export class ProjectsComponent implements OnInit {
   projects = [
     {
       name: "Slums",
-      image: "../../assets/images/slumsSnap.png"
+      image: "assets/images/slumsSnap.png"
     },
     {
       name: "PushOver",
-      image: "../../assets/images/pushOverSnap.png"
+      image: "assets/images/pushOverSnap.png"
     }
   ]
   constructor() { }
